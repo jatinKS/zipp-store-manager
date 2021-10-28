@@ -10,9 +10,9 @@ const Drawer = createDrawerNavigator();
 const Navigation = () => {
     return (
         <NavigationContainer>
-            <Drawer.Navigator initialRouteName="Home">
-                <Drawer.Screen name="Orders" component={Orders} />
+            <Drawer.Navigator initialRouteName="Products">
                 <Drawer.Screen name="Products" component={Products} />
+                <Drawer.Screen name="Orders" component={Orders} />
             </Drawer.Navigator>
         </NavigationContainer>
     )

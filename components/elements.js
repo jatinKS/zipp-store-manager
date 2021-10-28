@@ -34,7 +34,7 @@ const ButtonEl = (props) => {
     const { colors } = useTheme();
     const elColor = colors.primary;
     return (
-        <TouchableOpacity style={{...styles.buttonEl,backgroundColor: elColor}}>
+        <TouchableOpacity style={{...styles.buttonEl,backgroundColor: elColor}} onPress={onPress}>
             <Text style={styles.buttonElText}>{label}</Text>
         </TouchableOpacity>
     );
