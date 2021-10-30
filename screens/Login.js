@@ -8,8 +8,8 @@ import { loginUser } from '../app/features/users/UserSlice';
 const Login = () => {
 
     const { colors } = useTheme();
-    const [email, setEmail] = useState('zippgrocery');
-    const [password, setPassword] = useState('Developer@999');
+    const [email, setEmail] = useState('Adum1');
+    const [password, setPassword] = useState('jatin@pass');
     const dispatch = useDispatch();
     const { isLoading, userInfo, error } = useSelector( state => state.user );
 

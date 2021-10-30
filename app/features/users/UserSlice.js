@@ -35,7 +35,6 @@ export const loginFromStorage = createAsyncThunk(
 export const loginUser = createAsyncThunk(
     'users/login',
     async({ email, password }, thunkAPI) => {
-        console.log('wiky',thunkAPI);
         try{
             const response = await fetch(
                 'https://zippgrocery.com/wp-json/jwt-auth/v1/token',
