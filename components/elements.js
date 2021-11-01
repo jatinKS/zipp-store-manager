@@ -48,9 +48,9 @@ const ButtonEl = (props) => {
     );
 }
 
-const ProductEl = ({product}) => {
+const ProductEl = ({ product, onPress }) => {
     return (
-        <TouchableOpacity>
+        <TouchableOpacity onPress={onPress}>
             <Card style={styles.productWrap}>
                 <View style={styles.productWrapIn}>
                     <View style={styles.productImgWrap}>
@@ -71,7 +71,7 @@ const ProductEl = ({product}) => {
     )
 }
 
-const OrderEl = ({order}) => {
+const OrderEl = ({order, onPress }) => {
     //order.items
     let orderItemDetails = order.items.map(item=>item.name+' X '+item.quantity);
     orderItemDetails = orderItemDetails.toString().substring(0,100);
@@ -82,7 +82,7 @@ const OrderEl = ({order}) => {
         pending
     */
     return (
-        <TouchableOpacity>
+        <TouchableOpacity onPress={onPress}>
             <Card style={styles.productWrap}>
                 <View style={{flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center'}}>
                     <Text style={{fontWeight: '700', fontSize: 17, color: '#494949'}}>#{order.orderId}</Text>

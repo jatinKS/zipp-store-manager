@@ -31,7 +31,9 @@ const Orders = ({ navigation }) => {
             time: item.date_created
         }
         return (
-            <OrderEl order={orderObj} />
+            <OrderEl order={orderObj} onPress={ () => {
+                navigation.push('Order Details', { order: item });
+            }} />
         );
     };
     const x = [

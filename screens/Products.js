@@ -41,7 +41,9 @@ const Products = ({ navigation }) => {
             price: item.price
         }
         return (
-            <ProductEl product={productObj} />
+            <ProductEl product={productObj} onPress={ () => {
+                navigation.push('Product Details');
+            }}/>
         );
     };
 
@@ -66,7 +68,9 @@ const Products = ({ navigation }) => {
                 keyExtractor={item => item.id}
             />
             <SafeAreaView>
-                <TouchableOpacity>
+                <TouchableOpacity onPress={() => {
+                    navigation.push('Create Product');
+                }}>
                     <View style={{
                         backgroundColor: '#20a8d8',
                         width: 50,
